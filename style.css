@@ -15,6 +15,20 @@ body{
     background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExODZ4YWV2MDhibTg2NXMwdHB1NHd6Y284NjZwYTlxdGJjMHJzNXBybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ohONS2y8GTDoI/giphy.webp);
 }
 
+body::before {
+    content: ''; /* Required for the pseudo-element to render */
+    position: absolute; /* Position it over the body */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://goeffelfried.github.io/images/stretchedgoeffel.jpg);
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center;
+    opacity: 0.5; /* Set the opacity of the second background image */
+    z-index: -1; /* Place it behind the content of the body */
+}
+
 .Container{
     display: flex;
     flex-direction: column;
